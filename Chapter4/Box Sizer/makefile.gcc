@@ -1,0 +1,13 @@
+CXX = g++
+
+WX = C:\wxWidgets
+
+CXXFLAGS = -Wall -O2 -std=gnu++14 -c -I$(WX)\include -I$(WX)\lib\gcc_dll\mswu  -pipe -mthreads -D__GNUWIN32__ -D__WXMSW__ -DWXUSINGDLL -DwxUSE_UNICODE
+
+CXXLIBS = -L$(WX)\lib\gcc_dll -s -mthreads  -lwxmsw30u_core -lwxbase30u -lwxpng -lwxzlib -mwindows
+
+TARGET = Box\ Sizer
+
+all:
+	$(CXX) $(CXXFLAGS) *.cpp 
+	$(CXX) *.o $(CXXLIBS) -o $(TARGET)
