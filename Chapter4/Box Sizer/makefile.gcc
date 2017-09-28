@@ -11,3 +11,9 @@ TARGET = Box\ Sizer
 all:
 	$(CXX) $(CXXFLAGS) *.cpp 
 	$(CXX) *.o $(CXXLIBS) -o $(TARGET)
+	
+run:
+	$(TARGET)
+		
+clean:
+	-if exist del *.o $(TARGET)
