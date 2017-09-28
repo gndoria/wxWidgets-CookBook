@@ -45,10 +45,5 @@ void MainFrame::onClose(wxCommandEvent &event){
 }
 
 void MainFrame::onAbout(wxCommandEvent &event){
-    wxAboutDialogInfo about;/**Declare an about dialog info*/
-    about.SetName(_("A programm with dynamic event handlers"));/**Set the name*/
-    about.SetVersion(_("0.1 Alpha"));/**Set the version*/
-    about.SetDescription(_("This program demonstrates how to handle events using event handlers."));/**Set the description*/
-    about.SetCopyright(_("(C) 2017 Gideon Ndoria <gndoria@gmail.com>"));/**Set the copyright*/
-    wxAboutBox(about, this);/**Show the about dialog*/
+	wxMessageBox(_("An application demonstrating dynamic event handlers."), _("About"));/**Show the about dialog*/
 }
