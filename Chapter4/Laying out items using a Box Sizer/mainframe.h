@@ -29,12 +29,14 @@ class MainFrame : public wxFrame{
 		wxMenuBar *menuBar = nullptr;
 		wxMenu *fileMenu ,*helpMenu = nullptr;/**Declare the menus*/
 
-		wxSizer *mainSizer, *contentSizer = nullptr;/**Declare a generic sizer.This is to allow you to specialise it to a diffrent sizer type as
-		required.
+		wxSizer *mainSizer, *contentSizer, *horizontalSizer = nullptr;/**Declare a generic sizer.This is to allow you to
+		specialise it to a diffrent sizer type as required.
 		For example we could initialise contentSizer as a boxsizer now and if our ui design changes i.e. If we decide we want a flexgrid sizer
 		instead, the only change would only occur in our initalisation code in mainframe.cpp*/
 
 		wxPanel *mainPanel = nullptr;/**The panel will be added to the mainSizer.This is to cover the window background in microsoft windows*/
+
+		wxButton *button1, *button2, *button3, *button4, *button5, *button6 = nullptr;/**Declare buttons for the demonstration*/ 
 
 		void onClose(wxCommandEvent &event);/**Declare the function to handle the close event*/
 		void onAbout(wxCommandEvent &event);/**Declare the function to handle the about event*/
