@@ -16,7 +16,7 @@ bool MainApp::OnInit(){
 	Initialise the MainFrame object
 	You don't need to call delete on it.It will be deleted when the application exits
 	*/
-	MainFrame *frame = new MainFrame(_("Application With A Menu Bar"));
+	MainFrame *frame = new MainFrame(_T("Application With A Menu Bar"));
 	/**
 	Show the frame
 	*/

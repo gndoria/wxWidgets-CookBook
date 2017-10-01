@@ -20,16 +20,16 @@ MainFrame::MainFrame(const wxString &title)
 	////////////////////////////////////////////////////////////////////////////
 	fileMenu = new wxMenu;/**Initialise the fileMenu*/
 	
-	fileMenu->Append(wxID_EXIT, _("&Quit"), _("Quit the application"));/**Add a menu item with a stock id and help text*/
+	fileMenu->Append(wxID_EXIT, _T("&Quit"), _T("Quit the application"));/**Add a menu item with a stock id and help text*/
 
 	////////////////////////////////////////////////////////////////////////////
 	helpMenu = new wxMenu;/**Initialise the helpMenu*/
 
-	helpMenu->Append(ID_ABOUT, _("&About	F1"), _("Show about dialog"));/**Add a menu item with a custom id and an accelerator of F1*/
+	helpMenu->Append(ID_ABOUT, _T("&About	F1"), _T("Show about dialog"));/**Add a menu item with a custom id and an accelerator of F1*/
 
 	////////////////////////////////////////////////////////////////////////////
-	menuBar->Append(fileMenu, _("&File"));/**Add the fileMenu to the menuBar*/
-	menuBar->Append(helpMenu, _("&Help"));/**Add the helpMenu to the menuBar*/
+	menuBar->Append(fileMenu, _T("&File"));/**Add the fileMenu to the menuBar*/
+	menuBar->Append(helpMenu, _T("&Help"));/**Add the helpMenu to the menuBar*/
 
 	////////////////////////////////////////////////////////////////////////////
 	mainSizer = new wxBoxSizer(wxVERTICAL);/**Initialise mainsizer as an instance of a boxsizer and set its orientation*/
@@ -60,6 +60,6 @@ void MainFrame::onClose(wxCommandEvent &event){
 }
 
 void MainFrame::onAbout(wxCommandEvent &event){
-	wxMessageBox(_("A demo application for wxWidgets 3.0 cookbook.\n(C) Gideon Ndoria 2017"),
-		_("About The Application"));/**Show the about dialog*/
+	wxMessageBox(_T("A demo application for wxWidgets 3.0 cookbook.\n© Gideon Ndoria 2017"),
+		_T("About The Application"));/**Show the about dialog*/
 }

@@ -16,7 +16,7 @@ bool MainApp::OnInit(){
 	Initialise the MainFrame object
 	You don't need to call delete on it.It will be deleted when the application exits
 	*/
-	MainFrame *frame = new MainFrame(_("Box Sizer"));
+	MainFrame *frame = new MainFrame(_T("Box Sizer"));
 	/**
 	Show the frame
 	*/
