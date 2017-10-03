@@ -36,7 +36,7 @@ MainFrame::MainFrame(const wxString &title)
 	this->SetSizer(mainSizer);
 
 	mainPanel = new wxPanel(this);/**Initialise the panel and set its' parent to this window*/
-	mainSizer->Add(mainPanel, wxEXPAND, wxEXPAND, 0);/**Add the panel to mainSizer and make it expand to fit the sizer and have a border of 0*/
+	mainSizer->Add(mainPanel, 1, wxEXPAND | wxALL, 0);/**Add the panel to mainSizer and make it expand to fit the sizer and have a border of 0*/
 
 	contentSizer = new wxBoxSizer(wxHORIZONTAL);/**Initialise contentSizer as an instance of a boxsizer and set its orientation.
 	This is the sizer we will be adding out controlls to*/

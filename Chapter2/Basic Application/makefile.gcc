@@ -6,7 +6,7 @@ CXXFLAGS = -Wall -O2 -std=gnu++14 -c -I$(WX)\include -I$(WX)\lib\gcc_dll\mswu  -
 
 CXXLIBS = -L$(WX)\lib\gcc_dll -s -mthreads  -lwxmsw30u_core -lwxbase30u -lwxpng -lwxzlib -mwindows
 
-TARGET = Basic\ Application
+TARGET = Basic\ Application.exe
 
 all:
 	$(CXX) $(CXXFLAGS) *.cpp 
